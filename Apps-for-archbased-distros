@@ -1,0 +1,21 @@
+To install yay you need the following:
+sudo pacman -S --neededgit base-devel glibc linux-api-headers libxml2
+
+Install with yay
+protonup-qt
+sublime-text-4
+protonhax
+microsoft-edge-beta
+opera (requires codecs right now versions on aur are opera-beta-ffmpeg-codecs-bin or opera-developer-ffmpeg-codecs-bin)
+steam
+heroic-games-launcher
+scanmem
+gameconqueror
+deluge-gtk
+eden (swith emulator)
+gtop (better top with graps)
+nvtop (gpu details/usage)
+gvim (vim with support for copy to clipboard)
+ani-cli
+ntfs-3g
+ryujinx
