@@ -1,7 +1,7 @@
 To install yay you need the following:
 sudo pacman -S --neededgit base-devel glibc linux-api-headers libxml2
 
-Install with yay
+Install with yay:
 protonup-qt
 sublime-text-4
 protonhax
