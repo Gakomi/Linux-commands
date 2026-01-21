@@ -1,0 +1,3 @@
+Install package nvidia-prime
+Requires drivers nvidia or nvidia-dkms
+To run app use prime-run <application-name> EX: prime-run steam
