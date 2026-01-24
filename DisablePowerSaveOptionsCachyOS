@@ -1,0 +1,7 @@
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+sudo -u sddm kwriteconfig6 --file powermanagementprofilesrc --group AC --group SuspendSession --key type 0
+kwriteconfig6 --file powermanagementprofilesrc --group AC --group ScreenBrightnessControl --key value 100
+kwriteconfig6 --file powermanagementprofilesrc --group AC --group DimDisplay --key idleTime 0
+kwriteconfig6 --file kscreenlockerrc --group Daemon --key Autolock false
+sudo sed -i 's/#IdleAction=ignore/IdleAction=ignore/' /etc/systemd/logind.conf
+reboot
