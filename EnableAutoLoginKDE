@@ -1,6 +1,6 @@
 sudo mkdir -p /etc/sddm.conf.d/
 sudo bash -c 'cat > /etc/sddm.conf.d/autologin.conf <<EOF
 [Autologin]
-User=$(whoami)
+User=<YOUR USER>
 Session=plasma
 EOF'
