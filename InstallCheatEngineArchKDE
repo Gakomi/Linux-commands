@@ -1,0 +1,22 @@
+First install Cheat Engine:
+Download Cheat Engine -> Add installer to Steam -> Use compatability tool (chose whatever proton version you want) -> Run the installer and finish the install.
+
+### Install protonhax: ###
+yay -S protonhax
+
+### You will need to add to all games you want to use Cheat Engine on the following Launch option: ###
+protonhax init %COMMAND%
+
+### Create a file cheatengine-protonhax.desktop in patch ~/.local/share/applications/ and open it in a text editor, I use vim so command would be in my case: ### 
+vim ~/.local/share/applications/cheatengine-protonhax.desktop
+
+### In the editor paste the following and save: ###
+[Desktop Entry]
+Type=Application
+Name=Cheat Engine (Protonhax)
+Exec=sh -c 'protonhax run "$(protonhax ls)" "$(find /home -type f -name 'cheatengine-i386.exe')"'
+Terminal=false
+Categories=Game;
+
+### Now you have an Cheat Engine (Protonhax) Application in the start meniu, you can add it to task bar or desktop by right click and choosing the option ###
+### Keep in mind that it will only run if you have the game open and the game has protonhax init %COMMAND% as a Launch option ###
