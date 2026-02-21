@@ -1,0 +1,30 @@
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
+# overwrite greeting
+# potentially disabling fastfetch
+#function fish_greeting
+#    # smth smth
+#end
+
+function cheat
+    # Find the exe and store it in a variable
+    # -print -quit ensures it stops at the first match for speed
+    set -l ce_path (find /home -type f -name 'cheatengine-i386.exe' -print -quit 2>/dev/null)
+
+    if test -n "$ce_path"
+        # Run protonhax using the variable
+        # $argv allows you to pass additional arguments if needed
+        protonhax run (protonhax ls) $ce_path --color=auto $argv
+    else
+        echo "Error: cheatengine-i386.exe not found in /home"
+    end
+end
+
+function icon
+    if count *.exe > /dev/null
+        wrestool -x -t 14 *.exe | icotool -x -
+        echo "Icons extracted successfully."
+    else
+        echo "Error: No .exe files found in this directory."
+    end
+end
