@@ -14,7 +14,7 @@ vim ~/.local/share/applications/cheatengine-protonhax.desktop
 [Desktop Entry]
 Type=Application
 Name=Cheat Engine (Protonhax)
-Exec=sh -c 'protonhax run "$(protonhax ls)" "$(find /home -type f -name 'cheatengine-i386.exe')"'
+Exec=sh -c 'protonhax run "$(protonhax ls)" "$(find /* -type f -name 'cheatengine-x86_64.exe')"'
 Terminal=false
 Categories=Game;
 
