@@ -36,7 +36,7 @@ TARGET_UID="1000"
 # Execute Google Chrome in the user's session
 sudo -u "$TARGET_USER" DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$TARGET_UID/bus" DISPLAY=:0 browser "$1"
 
-Replace user with your user and borwser with the name of the browser, the one that you use to open it from terminal, in my case google-chrome-stable
+#### Replace user with your user and borwser with the name of the browser, the one that you use to open it from terminal, in my case google-chrome-stable
 
 
 sudo chmod +x /usr/local/bin/xdg-open
