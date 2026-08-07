@@ -1,3 +1,4 @@
+FOR PROTON:
 First install Cheat Engine:
 Download Cheat Engine -> Add installer to Steam -> Use compatability tool (chose whatever proton version you want) -> Run the installer and finish the install.
 
@@ -20,3 +21,19 @@ Categories=Game;
 
 ### Now you have an Cheat Engine (Protonhax) Application in the start meniu, you can add it to task bar or desktop by right click and choosing the option ###
 ### Keep in mind that it will only run if you have the game open and the game has protonhax init %COMMAND% as a Launch option ###
+
+FOR LINUX:
+
+Create file:
+vim /usr/local/bin/xdg-open
+
+#!/usr/bin/env bash
+
+# Configurations (Replace with your actual username and UID)
+TARGET_USER="<username>"
+TARGET_UID="1000"
+
+# Execute Firefox in the user's session
+sudo -u "$TARGET_USER" DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$TARGET_UID/bus" DISPLAY=:0 firefox --new-tab "$1"
+
+sudo chmod +x /usr/local/bin/xdg-open
